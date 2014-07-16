@@ -31,7 +31,9 @@ $url=$_POST['url'];
       <ul class="nav navbar-nav">
         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
         <li class="hidden"> <a href="#page-top"></a> </li>
+        <li class="page-scroll"> <a href="index.html"><span class="label label-default">Go back</span></a> </li>
         <li class="page-scroll"> <a href="#about">About</a> </li>
+        
       </ul>
       
     </div>
