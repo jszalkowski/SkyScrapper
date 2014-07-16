@@ -83,8 +83,8 @@ else
 	  foreach($html->find('a') as $e) 
     echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong>
 	</td><td><a href=".$e->href."><div class=\"limit\" >".$e->href."</div>
-	</a></td><td><form action=\"functions/scrape.php\" method=\"POST\">
-	<input type=\"textfield\" style=\"display:none;\" value=".$e->href." name=\"link\">
+	</a></td><td><form action=\"scrape_home.php\" method=\"POST\">
+	<input type=\"textfield\" style=\"display:none;\" value=".$e->href." name=\"url\">
 	<button type=\"submit\" class=\"btn btn-warning btn-xs\">
 	<span class=\"glyphicon glyphicon-share\"></span> Open in new window</button>
 	</form></td></tr>";
