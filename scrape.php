@@ -62,11 +62,12 @@ else
       <div class="col-lg-12">
         <style>
 	  .limit{
-		width: 25px;
+		width: 500px;
 		font-weight: 300;
 		white-space: nowrap;
 		overflow: hidden!important;
 		text-overflow: ellipsis;
+		text-align:left;
 	  }
 	  </style>
         <p>
@@ -79,7 +80,7 @@ else
 	  echo "<table class=\"table table-hover\">";
 	  echo "<tbody>";
 	  foreach($html->find('a') as $e) 
-    echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong></td><td><a href=".$e->href."><span  class=\"limit\" >".$e->href."</span></a></td><td><button type=\"button\" class=\"btn btn-warning btn-xs\"><span class=\"glyphicon glyphicon-share\"></span> Open in new window</button></td></tr>";
+    echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong></td><td><a href=".$e->href."><div  class=\"limit\" >".$e->href."</div></a></td><td><button type=\"button\" class=\"btn btn-warning btn-xs\"><span class=\"glyphicon glyphicon-share\"></span> Open in new window</button></td></tr>";
 	echo "</tbody>";
 	echo "</table>";	 
 }
