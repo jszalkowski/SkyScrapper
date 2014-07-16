@@ -17,6 +17,7 @@ $url=$_POST['url'];
 
 <!-- Custom CSS -->
 <link href="css/scrolling-nav.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/x-icon" href="img/fav.ico" />
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
