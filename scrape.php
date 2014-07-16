@@ -59,6 +59,10 @@ else
 ?>
        <p><h4 class="pull-left">The root URL you entered is : 
        <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4></p>
+       
+      </div>
+      <div class="col-lg-12">
+      <p><h4 class="pull-left">The following hyperlinks were found !</h4></p>
       </div>
       
     </div>
