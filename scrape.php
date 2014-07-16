@@ -59,16 +59,17 @@ else
         <h4 class="pull-left">The root URL you entered is : <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4>
         </p>
       </div>
-      <div class="col-lg-12">
+      <div class="col-lg-8">
         <p>
-        <h4 class="pull-left">The following hyperlinks were found !</h4>
+        <h4 class="pull-left">The following hyperlinks were found !</h4></p><br />
          <?php 
       $html = file_get_html($url);
 	  echo "<br>";
+	  echo "<ul class=\"list-group\">";
 	  foreach($html->find('a') as $e) 
-    echo "<li>".$e->href."</li>". '<br>';
+    echo "<li class=\"list-group-item list-group-item-warning\" style=\"text-align:left\">".$e->href."</li>";
+	echo "</ul>";
 	  ?>        
-        </p>
       </div>
     </div>
   </div>
