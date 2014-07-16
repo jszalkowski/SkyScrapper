@@ -70,7 +70,7 @@ else
 	  echo "<table class=\"table table-hover\">";
 	  echo "<tbody>";
 	  foreach($html->find('a') as $e) 
-    echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong></td><td><a href=".$e->href.">".$e->href."</a></td></tr>";
+    echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong></td><td><a href=".$e->href.">".$e->href."</a></td><td><button type=\"button\" class=\"btn btn-warning btn-xs\"><span class=\"glyphicon glyphicon-share\"></span> Open in new window</button></td></tr>";
 	echo "</tbody>";
 	echo "</table>";	 
 }
