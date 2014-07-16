@@ -59,7 +59,7 @@ else
         <h4 class="pull-left">The root URL you entered is : <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4>
         </p>
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <p>
           <?php
         if (@file_get_contents($url))
@@ -67,10 +67,12 @@ else
 	echo "<h4 class=\"pull-left\">The following hyperlinks were found !</h4></p><br />";
 	$html = file_get_html($url);
 	  echo "<br>";
-	  echo "<ul class=\"list-group\">";
+	  echo "<table class=\"table table-hover\">";
+	  echo "<tbody>";
 	  foreach($html->find('a') as $e) 
-    echo "<li class=\"list-group-item list-group-item-warning\" style=\"text-align:left\">".$e->href."</li>";
-	echo "</ul>";	 
+    echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong></td><td><a href=".$e->href.">".$e->href."</a></td></tr>";
+	echo "</tbody>";
+	echo "</table>";	 
 }
 else
 {
