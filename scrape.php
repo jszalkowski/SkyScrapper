@@ -61,15 +61,25 @@ else
       </div>
       <div class="col-lg-8">
         <p>
-        <h4 class="pull-left">The following hyperlinks were found !</h4></p><br />
-         <?php 
-      $html = file_get_html($url);
+          <?php
+        if (@file_get_contents($url))
+{
+	echo "<h4 class=\"pull-left\">The following hyperlinks were found !</h4></p><br />";
+	$html = file_get_html($url);
 	  echo "<br>";
 	  echo "<ul class=\"list-group\">";
 	  foreach($html->find('a') as $e) 
     echo "<li class=\"list-group-item list-group-item-warning\" style=\"text-align:left\">".$e->href."</li>";
-	echo "</ul>";
-	  ?>        
+	echo "</ul>";	 
+}
+else
+{
+	echo"<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
+  <button type=\"button\" class=\"close\" data-dismiss=\"alert\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button>
+  <strong>Oops!</strong> Better check the URL, its not looking too good.
+</div>";
+}
+?>
       </div>
     </div>
   </div>
