@@ -1,4 +1,5 @@
 <?php
+include('functions/simple_html_dom.php');
 $url=$_POST['url'];
 
 ?>
