@@ -34,9 +34,7 @@ $url=$_POST['url'];
         <li class="hidden"> <a href="#page-top"></a> </li>
         <li class="page-scroll"> <a href="index.html"><span class="label label-default">Go back</span></a> </li>
         <li class="page-scroll"> <a href="#about">About</a> </li>
-        
       </ul>
-      
     </div>
     
     <!-- /.navbar-collapse --> 
@@ -44,11 +42,10 @@ $url=$_POST['url'];
   <!-- /.container --> 
 </nav>
 <section id="intro" class="intro-section">
- 
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-      <?php 
+        <?php 
 if (@file_get_contents($url))
 {
 	 $var= "<span class=\"label label-success\">Found '$url'!</span>";
@@ -58,14 +55,21 @@ else
 	$var= "<span class=\"label label-danger\">Can't find '$url'.</span>";
 }
 ?>
-       <p><h4 class="pull-left">The root URL you entered is : 
-       <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4></p>
-       
+        <p>
+        <h4 class="pull-left">The root URL you entered is : <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4>
+        </p>
       </div>
       <div class="col-lg-12">
-      <p><h4 class="pull-left">The following hyperlinks were found !</h4></p>
+        <p>
+        <h4 class="pull-left">The following hyperlinks were found !</h4>
+         <?php 
+      $html = file_get_html($url);
+	  echo "<br>";
+	  foreach($html->find('a') as $e) 
+    echo "<li>".$e->href."</li>". '<br>';
+	  ?>        
+        </p>
       </div>
-      
     </div>
   </div>
 </section>
