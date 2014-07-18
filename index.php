@@ -21,7 +21,7 @@
   <div class="container">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="#page-top">SkyScrapper <span class="label label-success">New v1.4</span></a> </div>
+      <a class="navbar-brand" href="#page-top">SkyScrapper <span class="label label-success">New v2.1</span></a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -43,10 +43,11 @@
         <p><strong>SkyScrapper</strong> is a scrapping and data extraction tool designed to extract data from HTML Applications. This is a semi-automatic data extraction and mining tool for extracting user specific data from various web applications. User specific data can be hyperlinks, images, scripts, documents, raw text or DOM Elements. Regular expression based crawling and scrapping is also supported. Enter your URL below to start fetching data.</p>
       </div>
       <div class="page-scroll">
-        <form action="scrape_home.php" method="POST">
+        <form action="scrape_home.php?url=true" method="POST">
           <div class="input-group input-group-lg col-lg-6 col-lg-offset-3"> 
           <span class="input-group-addon "><span class="glyphicon glyphicon-globe"></span></span>
             <input name="url" type="text" required class="form-control" id="url" placeholder="http://www.something.com" pattern="((mailto\:|(news|(ht|f)tp(s?))\://){1}\S+)">
+            
             <span class="input-group-btn">
             <input type="submit" name="scrape" class="btn btn-warning" value="Scrape!">
             </span> 
