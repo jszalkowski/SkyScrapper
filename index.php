@@ -13,6 +13,8 @@
 <!-- Custom CSS -->
 <link href="css/scrolling-nav.css" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/x-icon" href="img/fav.ico" />
+<!-- Growl -->
+<link href="stylesheets/jquery.growl.css" rel="stylesheet" type="text/css" />
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -61,8 +63,12 @@
 <script src="js/jquery-1.10.2.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.easing.min.js"></script> 
-
+<!-- Growl -->
+<script src="javascript/jquery.growl.js" type="text/javascript"></script>
 <!-- Custom Theme JavaScript --> 
 <script src="js/scrolling-nav.js"></script>
+<script type="text/javascript">
+  $.growl({ title: "Growl", message: "The kitten is awake!" });
+</script>
 </body>
 </html>
