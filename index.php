@@ -43,7 +43,7 @@
         <p><strong>SkyScrapper</strong> is a scrapping and data extraction tool designed to extract data from HTML Applications. This is a semi-automatic data extraction and mining tool for extracting user specific data from various web applications. User specific data can be hyperlinks, images, scripts, documents, raw text or DOM Elements. Regular expression based crawling and scrapping is also supported. Enter your URL below to start fetching data.</p>
       </div>
       <div class="page-scroll">
-        <form action="scrape_home.php?url=true" method="POST">
+        <form action="scrape_home.php" method="POST">
           <div class="input-group input-group-lg col-lg-6 col-lg-offset-3"> 
           <span class="input-group-addon "><span class="glyphicon glyphicon-globe"></span></span>
             <input name="url" type="text" required class="form-control" id="url" placeholder="http://www.something.com" pattern="((mailto\:|(news|(ht|f)tp(s?))\://){1}\S+)">
