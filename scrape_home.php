@@ -68,13 +68,15 @@ else
         <p>
         <h4 class="pull-left">The root URL you entered is : <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4>
         </p>
+        
       </div>
       <div class="col-lg-12">
+       <br>
       <div class="btn-group">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
-</div>
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span> Get Hyperlinks</button>
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-picture"></span> Get Images</button>
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Get Custom Elements</button>
+</div><hr>
         <style>
 	  .limit{
 		width: 500px;
