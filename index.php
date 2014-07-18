@@ -1,3 +1,12 @@
+<?php
+if(empty($_GET['q']))
+{
+}
+else
+{
+	$var = $_GET['q'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,10 +76,15 @@
 <script src="growl/jquery.growl.js" type="text/javascript"></script>
 <!-- Custom Theme JavaScript --> 
 <script src="js/scrolling-nav.js"></script>
-<script type="text/javascript">
+<?php
+if(empty($_GET['q']))
+{
+echo "<script type=\"text/javascript\">
 $( document ).ready(function() {
-  $.growl.notice({ title: "Hello", message: "Welcome to SkyScrapper!. Happy Scrapping....:)" });
+  $.growl.notice({ title: \"Hello\", message: \"Welcome to SkyScrapper!. Happy Scrapping....:)\" });
   });
-</script>
+</script>";
+}
+?>
 </body>
 </html>

@@ -42,7 +42,7 @@ else
       <ul class="nav navbar-nav">
         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
         <li class="hidden"> <a href="#page-top"></a> </li>
-        <li class="page-scroll"> <a href="index.php"><span class="label label-default">Go back</span></a> </li>
+        <li class="page-scroll"> <a href="index.php?q=true"><span class="label label-default">Go back</span></a> </li>
         <li class="page-scroll"> <a href="#about">About</a> </li>
       </ul>
     </div>
@@ -70,6 +70,11 @@ else
         </p>
       </div>
       <div class="col-lg-12">
+      <div class="btn-group">
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+</div>
         <style>
 	  .limit{
 		width: 500px;
