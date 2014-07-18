@@ -69,7 +69,7 @@
 <script src="js/scrolling-nav.js"></script>
 <script type="text/javascript">
 $( document ).ready(function() {
-  $.growl({ title: "Growl", message: "The kitten is awake!" });
+  $.growl.notice({ title: "Hello", message: "Welcome to SkyScrapper!. Happy Scrapping" });
   });
 </script>
 </body>
