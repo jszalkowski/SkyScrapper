@@ -1,4 +1,5 @@
 <?php
+include("simple_html_dom.php");
 if (isset($_POST['url'])) 
 {
     $url=$_POST['url'];

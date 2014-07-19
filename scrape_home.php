@@ -68,21 +68,17 @@ else
         <p>
         <h4 class="pull-left">The root URL you entered is : <span class="label label-info"><?php echo $url ;?></span> <?php echo $var;?> </h4>
         </p>
-        
       </div>
-      <div class="col-lg-12">
-       <br>
-      <div class="btn-group">
-  <button id="button" type="submit" name="hyper" class="btn btn-default" value="<?php echo $url ;?>">
-  <span class="glyphicon glyphicon-globe"></span> Get Hyperlinks</button>
-  
-  <button id="button" type="submit" name="image" class="btn btn-default" value="<?php echo $url ;?>">
-  <span class="glyphicon glyphicon-picture"></span> Get Images</button>
-  
-  <button id="button" type="button" name="custom" class="btn btn-default" value="<?php echo $url ;?>">
-  <span class="glyphicon glyphicon-edit"></span> Get Custom Elements</button>
-  
-</div><hr>
+      <div class="col-lg-12"> <br>
+        <div class="btn-group">
+          <ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+</ul>
+        </div>
+        <hr>
         <style>
 	  .limit{
 		width: 500px;
@@ -93,8 +89,8 @@ else
 		text-align:left;
 	  }
 	  </style>
-        <p>
-        
+        <p id="disp"> 
+          
       </div>
     </div>
   </div>
