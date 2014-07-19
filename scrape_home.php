@@ -129,7 +129,33 @@ else
 	}
 	?>
   </div>
-  <div class="tab-pane" id="profile">...</div>
+  <div class="tab-pane" id="profile">
+  <?php
+  if (@file_get_contents($url))
+	{
+		//echo "<h4 class=\"pull-left\">The following hyperlinks were found !</h4></p><br />";
+		$html = file_get_html($url);
+		echo "<br>";
+		echo "<table class=\"table table-hover\">";
+		echo "<tbody>";
+		echo "<thead><tr><td><h4 class=\"pull-left\">The following Images were found !</h4></td><td></td><td></td></tr></thead>";
+		foreach($html->find('img') as $e) 
+		echo "<tr style=\"text-align:left\"><td><strong>".$e->src."</strong>
+		</td><td><img src=".$e->src." alt=\"...\" class=\"img-rounded\">
+		</a></td><td>
+		</td></tr>";
+		echo "</tbody>";
+		echo "</table>";	 
+	}
+	else
+	{
+		echo"<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
+		<button type=\"button\" class=\"close\" data-dismiss=\"alert\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button>
+		<strong>Oops!</strong> Better check the URL, its not looking too good.
+		</div>";
+	}
+	?>
+  </div>
   <div class="tab-pane" id="messages">...</div>
   <div class="tab-pane" id="settings">...</div>
 </div>
