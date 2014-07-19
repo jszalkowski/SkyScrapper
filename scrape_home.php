@@ -140,8 +140,10 @@ else
 		echo "<tbody>";
 		echo "<thead><tr><td><h4 class=\"pull-left\">The following Images were found !</h4></td><td></td><td></td></tr></thead>";
 		foreach($html->find('img') as $e) 
-		echo "<tr style=\"text-align:left\"><td><strong>".$e->src."</strong>
-		</td><td><img src=".$e->src." alt=\"...\" class=\"img-rounded\">
+		$root_url=$url;
+		$image_url=$root_url.$e->src;
+		echo "<tr style=\"text-align:left\"><td><strong>".$image_url."</strong>
+		</td><td><img src=".$image_url." alt=\"...\" class=\"img-rounded\">
 		</a></td><td>
 		</td></tr>";
 		echo "</tbody>";
