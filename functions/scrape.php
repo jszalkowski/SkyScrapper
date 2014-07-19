@@ -1,17 +1,10 @@
 <?php
 if (isset($_POST['url'])) 
 {
-    switch ($_POST['url']) 
-	{
-        case 'hyper':
-            display();
-            break;
-        //case 'img':
-          //  select();
-           // break;
-    }
+    $url=$_POST['url'];
+	display($url);
 }
-function display()
+function display($url)
 {
 	if (@file_get_contents($url))
 	{
@@ -45,5 +38,6 @@ function display()
 		<strong>Oops!</strong> Better check the URL, its not looking too good.
 		</div>";
 	}
+	return ;
 }
 ?>
