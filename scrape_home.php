@@ -70,7 +70,7 @@ else
         </p>
       </div>
       <div class="col-lg-12"> <br>
-        <div class="btn-group">
+        <div class="btn-group pull-left">
           <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="#home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-globe"></span>Hyperlinks</a></li>
             <li><a href="#profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-picture"></span>Images</a></li>
@@ -96,11 +96,12 @@ else
   <?php
   if (@file_get_contents($url))
 	{
-		echo "<h4 class=\"pull-left\">The following hyperlinks were found !</h4></p><br />";
+		//echo "<h4 class=\"pull-left\">The following hyperlinks were found !</h4></p><br />";
 		$html = file_get_html($url);
 		echo "<br>";
 		echo "<table class=\"table table-hover\">";
 		echo "<tbody>";
+		echo "<thead><tr><td><h4 class=\"pull-left\">The following hyperlinks were found !</h4></td><td></td><td></td></tr></thead>";
 		/*foreach($html->find('a') as $e) 
 		echo "<tr style=\"text-align:left\"><td><strong>".$e->plaintext."</strong>
 		</td><td><a href=".$e->href."><div class=\"limit\" >".$e->href."</div>
